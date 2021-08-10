@@ -1,0 +1,55 @@
+// Place all the styles related to the Hangman controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+/* Create two equal columns that floats next to each other */
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.letter-form {
+  display: inline;
+}
+
+.button {
+  border: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.new-game-button {
+  border: none;
+  text-align: center;
+  background-color: lightgrey;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 80px;
+  cursor: pointer;
+  position: fixed;
+  top: 40%;
+  left: 35%;
+}

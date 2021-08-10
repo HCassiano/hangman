@@ -1,0 +1,17 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2021-07-23 21:33:34.225619000 Z
+    - 2021-07-23 21:33:34.225619000 Z
+  - - schema_sha1
+    - 5c98ebc1f67e7e1cb729712f76512bf73f8fddbd
+    - 2021-07-23 21:33:34.232626000 Z
+    - 2021-07-23 21:33:34.232626000 Z

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  word: MyString
+  victories: 1
+  defeats: 1
+
+two:
+  word: MyString
+  victories: 1
+  defeats: 1

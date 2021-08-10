@@ -1,0 +1,11 @@
+<% word.each_char do |c| %>
+  <%if (lettersUsed.include? c) %>
+    <b style="font-size:50px">  
+      <%= c %>
+    </b>
+  <% else %>
+    <b style="font-size:50px"> 
+      <%= "_" %>
+    </b>
+  <% end %>
+<% end %>

@@ -1,0 +1,18 @@
+<h3>
+  <% if (guesses >= 5) %>
+    <%= "Você perdeu :(" %>
+  <% else %>
+    <%= "você ganhou :)" %>
+  <% end %>
+</h3>
+<form action="/hangman/newgame/">
+    <button type="submit" name="result" value=<% if (guesses >= 5) %> <%= "loss" %> <% else %> <%= "win" %> <% end %> > Novo Jogo </button>
+</form>
+<p></p>
+<% unless (report) %>
+  <form action="/hangman/report/">
+    <button type="submit" name="report" value=<%= word %>> Palavra estranha/com grafia errada? Aperte aqui para reportar</button>
+  </form>
+<% else %>
+  <b> Obrigado! </b>
+<% end %>

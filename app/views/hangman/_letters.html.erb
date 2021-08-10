@@ -1,0 +1,12 @@
+<% ('a'..'z').to_a.each do |c|%>
+<form class="letter-form" action="/hangman/letter/" method="get">
+   <% if (lettersUsed.include? c)%>
+     <%= "" %>
+   <% else %>
+     <button name="letter" type="submit" class="button" value=<%= c %> >
+     <%= c %>
+   <% end %>
+  </button>
+</form>
+<% end %>
+
