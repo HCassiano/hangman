@@ -119,8 +119,10 @@ private
       "ú"
     when 'c'
       "ç"
-    else
+    when " "
       "áãâéêíóõôúç"
+    else
+      ""
     end
   end
   
