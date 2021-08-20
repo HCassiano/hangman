@@ -17,7 +17,7 @@ class HangmanController < ApplicationController
     @endgameFlag = isEndgameMet(@word, @lettersUsed)
     @report = false
     if (@endgameFlag)
-      updateWordScore(@guesses >= 5 ? "loss" : "win", cookies[:recordId].to_i)
+      updateWordScore(@guesses >= getMaxGuesses() ? "loss" : "win", cookies[:recordId].to_i)
     end
     render :game
   end
@@ -85,10 +85,10 @@ private
      
 private 
   def updateCookiesWithLetterInput(letter)
-    fullCharList = + letter + addSpecialChars(letter)
+    fullCharList = letter + addSpecialChars(letter)
     cookies[:guesses] = cookies[:guesses].to_i + addOneIfIncorrectGuess(fullCharList, cookies[:word])
     if (cookies[:guesses].to_i >= getMaxGuesses())
-      cookies[:lettersUsed] = populateGuessesForGameOver()
+      cookies[:lettersUsed] = getAllValidLetters()
     else
       cookies[:lettersUsed] += fullCharList
     end
@@ -127,7 +127,7 @@ private
   end
   
 private
-  def populateGuessesForGameOver
+  def getAllValidLetters
     specialChars = addSpecialChars()
     completeCharList = ('a'..'z').to_a.join(',')
     completeCharList + specialChars
